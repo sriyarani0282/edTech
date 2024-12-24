@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <title>LearnEd</title>
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script>
+    $(window).on('scroll', function(){
+        if($(window).scrollTop()){
+          $('nav').addClass('black');
+       }else {
+       $('nav').removeClass('black');
+     }
+    })
+  </script>
+  </head>
+  <body>
+  <!-- Navigation Bar -->
+    <header id="header">
+      <nav>
+        <div class="logo"><img src="data:image/jpeg;base64,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" alt="logo"></div>
+        <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="#portfolio_section">Portfolio</a></li>
+          <li><a href="#team_section">Team</a></li>
+          <li><a href="#services_section">Services</a></li>
+          <li><a href="#contactus_section">Contact</a></li>
+        </ul>
+        <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="images/icon/search.png" alt="search" onclick=slide()></div>
+        <a class="get-started" href="login.html">Get Started</a>
+        <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/menu.png?raw=true" class="menu" onclick="sideMenu(0)" alt="menu">
+      </nav>
+      <div class="head-container">
+        <div class="quote">
+          <p>The beautiful thing about learning is that nobody can take it away from you</p>
+          <h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!</h5>
+          <div class="play">
+            <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/play.png?raw=true" alt="play"><span><a href="https://www.youtube.com/watch?v=KFyrgDO1WXk" target="_blank">Watch Now</a></span>
+          </div>
+        </div>
+        <div class="svg-image">
+          <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/extra/svg1.jpg?raw=true" alt="svg">
+        </div>
+      </div>
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/close.png?raw=true" alt=""></div>
+        <div class="user">
+          <img src="data:image/jpeg;base64,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" alt="Username">
+          <p>Mr Dev Sharma</p>
+          </div>
+                <ul>
+                  <li><a href="#about_section">About</a></li>
+                  <li><a href="#portfolio_section">Portfolio</a></li>
+                  <li><a href="#team_section">Team</a></li>
+                  <li><a href="#services_section">Services</a></li>
+                  <li><a href="#contactus_section">Contact</a></li>
+                  <li><a href="#feedBACK">Feedback</a></li>
+                </ul>
+              </div>
+            </header>
+
+
+          <!-- Some Popular Subjects -->
+            <div class="title">
+              <span>Popular Subjects on LearnEd</span>
+            </div>
+            <br><br>
+            <div class="course">
+              <center><div class="cbox">
+              <div class="det"><a href="subjects/jee.html"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/books.png?raw=true">JEE Preparation</a></div>
+              <div class="det"><a href="subjects/gate.html"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/book.png?raw=true">GATE Preparation</a></div>
+              <div class="det"><a href="subjects/jee.html#sample_papers"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/paper.png?raw=true">Sample Papers</a></div>
+              <div class="det"><a href="subjects/quiz.html"><img src="data:image/png;base64,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">Daily Quiz</a></div>
+              </div></center>
+              <div class="cbox">
+              <div class="det"><a href="subjects/computer_courses.html"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/computer.png?raw=true">Computer Courses</a></div>
+              <div class="det"><a href="subjects/computer_courses.html#data"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/data-course.jpg?raw=true">Data Structures</a></div>
+                <div class="det"><a href="subjects/computer_courses.html#algo"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/data-algo.jpg?raw=true">Algorithm</a></div>
+                    <div class="det det-last"><a href="subjects/computer_courses.html#projects"><img src="images/courses/projects.png">Projects</a></div>
+                    </div>
+                  </div>
+
+
+                <!-- ABOUT -->
+                  <div class="diffSection" id="about_section">
+                    <center><p style="font-size: 50px; padding: 100px">About</p></center>
+                    <div class="about-content">
+                        <div class="side-image">
+                          <img class="sideImage" src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/extra/e3.jpg?raw=true">
+                        </div>
+                        <div class="side-text">
+                          <h2>What you think about us ?</h2>
+                          <p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research.<br> Educational website can include websites that have games, videos or topic related resources that act as tools to enhance learning and supplement classroom teaching. These websites help make the process of learning entertaining and attractive to the student, especially in today's age. <br>Using HTML(HyperText Markup Language), CSS(Cascading Style Sheet), JavaScript, we can make learning more easier and in a interesting way.</p>
+                        </div>
+                    </div>
+                  </div>
+
+
+                <!-- PORTFOLIO -->
+                  <div class="diffSection" id="portfolio_section">
+                    <center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p></center>
+                    <div class="content">
+                      <p>
+                        “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”
+                      </p>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <p>We're increasing this data every year</p>
+                    <div class="smbox">
+                    <span><center><div class="data">154</div><div class="det">Enrolled Students</div></center></span>
+                    <span><center><div class="data">62</div><div class="det">Total Courses</div></center></span>
+                      <span><center><div class="data">56</div><div class="det">Placed Students</div></center></span>
+                          <span><center><div class="data">27</div><div class="det">Total Projects</div></center></span>
+                          </div>
+                        </div>
+
+
+                      <!-- TEAM -->
+                        <div class="diffSection" id="team_section">
+                          <center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p></center>
+                          <div class="totalcard">
+                            <div class="card">
+                              <center><img src="data:image/jpeg;base64,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"></center>
+                              <center><div class="card-title">Mr Dev Sharma</div>
+                              <div id="detail">
+                                <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
+                                <div class="duty"></div>
+                                <a href="https://www.linkedin.com/in/roshan-kumar-a18b76179/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+                              </div>
+                              </center>
+                            </div>
+                            <div class="card">
+                              <center><img src="data:image/jpeg;base64,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"></center>
+                              <center><div class="card-title">Mr Dev sharma</div>
+                              <div id="detail">
+                                <p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+                                <div class="duty"></div>
+                                <a href="https://www.linkedin.com/in/roshan-kumar-a18b76179/" target="_blank"><button class="btn-akhil">Follow +</button></a>
+                              </div>
+                              </center>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- SERVICES -->
+                          <div class="service-swipe">
+                            <div class="diffSection" id="services_section">
+                            <center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+                            </div>
+                            <a href="subjects/computer_courses.html"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/courses/computer.png?raw=true"><p>Free Online Computer Courses</p></div></a>
+                            <a href="subjects/jee.html"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/brainbooster.png?raw=true"><p>Building Concepts for Competitive Exams</p></div></a>
+                            <a href="#"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/online-tutorials.png?raw=true"><p>Online Video Lectures</p></div></a>
+                            <a href="subjects/jee.html#sample_papers"><div class="s-card"><img src="images/icon/papers.jpg"><p>Sample Papers of Various Competitive Exams</p></div></a>
+                            <a href="#"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/p3.png?raw=true"><p>Performance and Ranking Report</p></div></a>
+                            <a href="#contactus_section"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/discussion.png?raw=true"><p>Discussion with Our Tutors & Mentors</p></div></a>
+                            <a href="subjects/quiz.html"><div class="s-card"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/q1.png?raw=true"><p>Daily Brain Teasing Questions to Improve IQ</p></div></a>
+                            <a href="#contactus_section"><div class="s-card"><img src="images/icon/help.png"><p>24x7 Online Support</p></div></a>
+                          </div>
+
+                        <!-- Reviews by Students -->
+                        <div id="makeitfull">
+                          <a href="#review_section"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/makeitfull.png?raw=true"></a>
+                        </div>
+                        <div class="review">
+                          <div class="diffSection" id="review_section">
+                            <center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say About Us?</p></center>
+                          </div>
+                          <div class="rev-container">
+                            <div class="rev-card">
+                              <div class="identity">
+                                <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/creator/humanNotExist1.jpg?raw=true"><p>Sophie Daniel</p>
+                                <h6>Java</h6>
+                                <div class="rating"><img src="images/icon/star.png"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+                              </div>
+                              <div class="rev-cont">
+                                <p id="title">Review:</p>
+                                <p id="content">
+                                  I did Java Fundamenetal course with Rishab Sir. It was a great experience. The brain teasers and assignments, actually the whole lot of content was really good. Some problems were challenging yet interesting. Was explained very well where ever I stuck...
+                                </p>
+                                </div>
+                                </div>
+                                <div class="rev-card">
+                                <div class="identity">
+                                <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/creator/humanNotExist2.jpg?raw=true"><p>Clayton Clair</p>
+                                <h6>C/C++</h6>
+                                <div class="rating"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src>
+                                  <img src="images/icon/star.png"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"></div>
+                                </div>
+                                <div class="rev-cont">
+                                <p id="title">Review:</p>
+                                <p id="content">
+                                  When I was watching "Dear Zindagi", I could relate Sharukh Khan to Arnav Bhaiya. The way Sharukh Khan was giving life lessons to Alia Bhatt, in the same way Arnav Bhaiya will give coding life lessons which will guide you throughout your code life...
+                                </p>
+                                </div>
+                                </div>
+                                <div class="rev-card">
+                                <div class="identity">
+                                <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/creator/humanNotExist3.jpg?raw=true"><p>Devyn Sethi</p>
+                                <h6>JEE</h6>
+                                <div class="rating"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src=""><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"></div>
+                                </div>
+                                <div class="rev-cont">
+                                <p id="title">Review:</p>
+                                <p id="content">
+                                  LearnEd was an amazing experience for me. I belong to electronics department and had a little experience in coding but I think it has helped me think things through in a much more analytical manner. Coding is important no matter which branch you are in. It gives you a better understanding about how to approach a problem...
+                                </p>
+                                </div>
+                                </div>
+                                <div class="rev-card">
+                                <div class="identity">
+                                <img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/creator/humanNotExist4.jpg?raw=true"><p>Rylee Phillips</p>
+                                  <h6>Python</h6>
+                                          <div class="rating"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/star.png?raw=true"><img src="images/icon/star.png"></div>
+                                        </div>
+                                        <div class="rev-cont">
+                                          <p id="title">Review:</p>
+                                          <p id="content">
+                                            This was my first complete course at coding blocks. I attended the Python course in Winter 2020 and loved it which made me join the full course. Shubham bhaiya and Ayush Bhaiya(TA) have good knowledge about the field and were very helpful in making us understand the concepts. I would certainly recommend this to anyone...
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- CONTACT US -->
+                                    <div class="diffSection" id="contactus_section">
+                                      <center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+                                      <div class="csec"></div>
+                                      <div class="back-contact">
+                                        <div class="cc">
+                                        <form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+                                          <label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+                                          <center>
+                                          <input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+                                          </center>
+                                          <label>Email <span class="imp">*</span></label><br>
+                                          <input type="email" name="mail" style="width: 100%" required="required"><br>
+                                          <label>Message <span class="imp">*</span></label><br>
+                                          <input type="text" name="message" style="width: 100%" required="required"><br>
+                                          <label>Additional Details</label><br>
+                                          <textarea name="addtional"></textarea><br>
+                                          <button type="submit" id="csubmit">Send Message</button>
+                                        </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- FEEDBACK -->
+                                      <div class="title2" id="feedBACK">
+                                        <span>Give Feedback</span>
+                                        <div class="shortdesc2">
+                                          <p>Please share your valuable feedback to us</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="feedbox">
+                                        <div class="feed">
+                                          <form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+                                            <label>Your Name</label><br>
+                                            <input type="text" name="" class="fname" required="required"><br>
+                                            <label>Email</label><br>
+                                            <input type="email" name="mail" required="required"><br>
+                                            <label>Additional Details</label><br>
+                                            <textarea name="addtional"></textarea><br>
+                                            <button type="submit" id="csubmit">Send Message</button>
+                                          </form>
+                                        </div>
+                                      </div>
+
+                                    <!-- Sliding Information -->
+                                      <marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+                                    <!-- FOOTER -->
+                                      <footer>
+                                        <div class="footer-container">
+                                          <div class="left-col">
+                                            <img src="images/icon/logo - Copy.png" style="width: 200px;">
+                                            <div class="logo"></div>
+                                            <div class="social-media">
+                                              <a href="#"><img src="image/icon/facebook.png"></a>
+                                              <a href="#"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/insta.png?raw=true"></a>
+                                                        <a href="#"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/tt.png?raw=true"></a>
+                                                        <a href="#"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/ytube.png?raw=true"></a>
+                                                        <a href="#"><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/linkedin.png?raw=true"></a>
+                                                      </div><br><br>
+                                                      <p class="rights-text">Copyright © 2024 Created By Mr Dev Sharma, All Rights Reserved.</p>
+                                                      <br><p><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/location.png?raw=true"> Dayanand Sagar University<br>Kanakpura Road, Bengalore-562112</p><br>
+                                                      <p><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/phone.png?raw=true"> +91-1234-567-890<br><img src="https://github.com/roshan9419/LearnEd_E-learning_Website/blob/master/images/icon/mail.png?raw=true">&nbsp; learnedonline9419@gmail.com</p>
+                                                    </div>
+                                                    <div class="right-col">
+                                                      <h1 style="color: #fff">Our Newsletter</h1>
+                                                      <div class="border"></div><br>
+                                                      <p>Enter Your Email to get our News and updates.</p>
+                                                      <form class="newsletter-form">
+                                                        <input class="txtb" type="email" placeholder="Enter Your Email">
+                                                        <input class="btn" type="submit" value="Submit">
+                                                      </form>
+                                                    </div>
+                                                  </div>
+                                                </footer>
+
+                                              </body>
+                                              </html>
+                                              <style>
+                                                @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+                                                @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+                                                @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+                                                * {
+                                                  box-sizing: border-box;
+                                                  margin: 0;
+                                                  padding: 0;
+                                                }
+
+                                                html {
+                                                  scroll-behavior: smooth;
+                                                }
+                                                body {
+                                                  background: #FFF;
+                                                  font-family: 'Open Sans', sans-serif;
+                                                }
+
+                                                header {
+                                                  height: 90vh;
+                                                  /* background: #000; */
+                                                }
+                                                .black {
+                                                  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                                                }
+                                                nav {
+                                                  padding-top: 20px;
+                                                  padding-bottom: 20px;
+                                                  top: 0;
+                                                  position: fixed;
+                                                  display: flex;
+                                                  width: 100%;
+                                                  z-index: 1000;
+                                                  background: #fff;
+                                                  justify-content: space-around;
+                                                  transition: 1.5s;
+                                                  align-items: center;
+                                                }
+                                                nav ul {
+                                                  display: flex;
+                                                  align-items: center;
+                                                }
+                                                nav ul li {
+                                                  list-style: none;
+                                                  margin: 5px 10px;
+                                                }
+                                                nav ul li a {
+                                                  padding: 2px 10px;
+                                                  color: #2e2e2e;
+                                                  cursor: pointer;
+                                                  transition: .5s;
+                                                  text-decoration: none;
+                                                }
+                                                nav ul li a:hover {
+                                                  color: #fff;
+                                                  border-radius: 5px;
+                                                  background: #DF2771;
+                                                }
+                                                .active {
+                                                  color: #fff;
+                                                  border-radius: 5px;
+                                                  background: #DF2771;
+                                                }
+                                                .srch {
+                                                  padding: 2px 10px;
+                                                  display: flex;
+                                                  /* align-items: center; */
+                                                  justify-content: center;
+                                                  /* background: #0066ff; */
+                                                  border: 1px solid;
+                                                  border-radius: 20px;
+                                                }
+                                                .srch img {
+                                                  width: 25px;
+                                                  cursor: pointer;
+                                                }
+                                                .srch .search {
+                                                  /* padding: 2px 10px; */
+                                                  outline: none;
+                                                  border: none;
+                                                  background: transparent;
+                                                }
+
+                                                .get-started {
+                                                  margin-left: 50px;
+                                                  padding: 5px 20px;
+                                                  border: 2px solid #DF2771;
+                                                  border-radius: 20px;
+                                                  text-decoration: none;
+
+                                                  transition: .5s;
+                                                  background-color: #DF2771;
+                                                  color: #fff;
+                                                }
+                                                .get-started:hover {
+                                                  color: #2e2e2e;
+                                                  background: #fff;
+                                                }
+                                                .logo img{
+                                                  width: 120px;
+                                                  cursor: pointer;
+                                                  transition: all 1s;
+                                                }
+
+                                                a, button {
+                                                  float: left;
+                                                  font-family: "Montserrat", sans-serif;
+                                                  font-weight: 500;
+                                                  font-size: 15px;
+                                                  color: #2E3D49;
+                                                  display: block;
+                                                  text-decoration: none;
+                                                  text-align: center;
+                                                }
+                                                .head-container {
+                                                  margin-top: 245px;
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  align-items: center;
+                                                  justify-content: space-around;
+                                                }
+                                                .quote {
+                                                  width: 600px;
+                                                  transform: translateY(-50px);
+                                                }
+                                                .quote h5 {
+                                                  margin-top: 20px;
+                                                  color: #0009;
+                                                  line-height: 20px;
+                                                }
+                                                .quote p {
+                                                  font-size: 50px;
+                                                  color: #2e2e2e;
+                                                }
+                                                .quote .play {
+                                                  margin-top: 20px;
+                                                  display: flex;
+                                                  /* justify-content: center; */
+                                                  align-items: center;
+                                                }
+                                                .quote .play img {
+                                                  width: 45px;
+                                                  cursor: pointer;
+                                                  filter: drop-shadow(0 0 10px #0002);
+                                                }
+                                                .quote .play span a{
+                                                  margin-left: 10px;
+                                                  font-size: 20px;
+                                                  font-weight: 900;
+                                                  color: rgba(0, 0, 0, 0.8);
+                                                  cursor: pointer;
+                                                }
+                                                .svg-image img{
+                                                  width: 500px;
+                                                  filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
+                                                }
+
+                                                /* SIDE MENU */
+                                                .menu {
+                                                  cursor: pointer;
+                                                  width: 25px;
+                                                  display: none;
+                                                }
+                                                .side-menu {
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  background: rgba(182, 33, 90, 0.993);
+                                                  position: absolute;
+                                                  top: 0;
+                                                  transition: .8s;
+                                                  z-index: 2000;
+                                                  transform: translateX(-100%);
+                                                }
+                                                .side-menu ul {
+                                                  margin-top: 35%;
+                                                  display: flex;
+                                                  flex-direction: column;
+                                                  justify-content: center;
+                                                  /* background: #FA4B37; */
+                                                }
+                                                .side-menu ul li {
+                                                  list-style: none;
+                                                  /* background: #009900; */
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  /* border-bottom: 1px solid #fff; */
+                                                  /* padding: 10px 0px; */
+                                                }
+                                                .side-menu ul li:hover a{
+                                                  background: #fff;
+                                                  color: #DF2771;
+                                                }
+                                                .side-menu ul li a{
+                                                  color: #FFF;
+                                                  width: 100%;
+                                                  font-size: 1em;
+                                                  /* background: #2E3D49; */
+                                                  text-decoration: none;
+                                                  padding: 15px 0px;
+                                                }
+                                                .close img{
+                                                  float: right;
+                                                  width: 35px;
+                                                  cursor: pointer;
+                                                  margin: 10px;
+                                                }
+                                                .user {
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  margin-top: 10%;
+                                                }
+                                                .user img {
+                                                  width: 60px;
+                                                  border-radius: 50%;
+                                                  border: 2px solid #fff;
+                                                  filter: drop-shadow(0 10px 20px #0004);
+                                                  margin-right: 30px;
+                                                  cursor: pointer;
+                                                }
+                                                .user p {
+                                                  color: #fff;
+                                                  cursor: pointer;
+                                                }
+                                                .user img, .user p {
+                                                  opacity: 1;
+                                                }
+                                                /*Common things in all sections*/
+                                                #about_section, #portfolio_section, #team_section, #services_section, #contactus_section {
+                                                  font-family: 'Open Sans', sans-serif;
+                                                  color: #2E3D49;
+                                                  position: relative;
+                                                }
+                                                .diffSection {
+                                                  width: 100%;
+                                                  /*position: relative;*/
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                }
+                                                .diffSection .content {
+                                                  margin: 10px;
+                                                  text-align: center;
+                                                  padding: 10px 100px;
+                                                  font-size: 1.1em;
+                                                }
+
+                                                /*PORTFOLIO*/
+                                                .extra {
+                                                  width: 100%;
+                                                }
+                                                .extra p {
+                                                  padding: 30px;
+                                                  padding-bottom: 150px;
+                                                  font-size: 50px;
+                                                  text-align: center;
+                                                  color: #fff;
+                                                  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("images/extra/b1.jpg");
+                                                  background-size: cover;
+                                                  background-attachment: fixed;
+                                                  font-family: cursive;
+                                                  z-index: -9;
+                                                }
+                                                .smbox {
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  transform: translateY(-100px);
+                                                  justify-content: center;
+                                                }
+                                                .smbox span {
+                                                  margin: 1%;
+                                                  background: #fff;
+                                                  box-shadow: inset 0px 0px 25px rgba(0,0,0,0.2),
+                                                            0 0 40px rgba(0,0,0,0.3);
+                                                  border-radius: 10px;
+                                                  padding: 30px 50px;
+                                                  cursor: pointer;
+                                                }
+                                                .smbox span:hover {
+                                                  transform: scale(1.3);
+                                                  transition: .5s ease;
+                                                }
+                                                .smbox .data {
+                                                  font-size: 80px;
+                                                  color: #FA6146;	
+                                                }
+                                                .smbox .det {
+                                                  font-size: 20px;
+                                                  color: #272529;
+                                                  font-family: cursive;
+                                                }
+
+                                                /*Title*/
+                                                .title {
+                                                   margin-top: 0px; 
+                                                  font-family: 'Open Sans', sans-serif;
+                                                  font-size: 30px;
+                                                  text-align: center;
+                                                  color: #2E3D49;
+                                                }
+
+                                                /*ABOUT*/
+                                                .about-content {
+                                                  width: 100%;
+                                                  position: relative;
+                                                  justify-content: center;
+                                                  flex-wrap: wrap;
+                                                  display: flex;
+                                                  align-items: center;
+                                                }
+                                                .about-content .side-text {
+                                                  width: 550px;
+                                                  padding: 50px 40px;
+                                                  background: #fff;
+                                                  box-shadow: 2px 0 100px rgba(0,0,0,0.3);
+                                                  border-radius: 5px;
+                                                  text-align: justify;
+                                                  line-height: 22px;
+                                                  opacity: 0;
+                                                  transform: translateX(-100px);
+                                                  transition: 1s ease-in-out;
+                                                }
+                                                .about-content .side-text-appear {
+                                                  opacity: 1;
+                                                  transform: translateX(0px);
+                                                }
+                                                .about-content .side-text h2 {
+                                                  padding: 10px;
+                                                }
+                                                .about-content .side-text p {
+                                                  padding: 10px;
+                                                }
+                                                .about-content .side-image img {
+                                                  width: 90%;
+                                                  border-radius: 5px;
+                                                }
+                                                .sideImage {
+                                                  transform: translateX(100px);
+                                                  opacity: 0;
+                                                  transition: .8s ease-in-out;
+                                                }
+                                                .sideImage-appear {
+                                                  opacity: 1;
+                                                  transform: translateX(0px);
+                                                }
+
+                                                /*POPULAR SUBJECTS*/
+                                                .cbox {
+                                                  position: relative;
+                                                  width: 100%;
+                                                  display: inline-flex;
+                                                  flex-wrap: wrap;
+                                                  justify-content: center;
+                                                }
+                                                .cbox .det {
+                                                  width: 250px;
+                                                  height: 80px;
+                                                  margin: 10px;
+                                                  background: #fff;
+                                                  cursor: pointer;
+                                                }
+                                                .cbox .det a{
+                                                  justify-content: space-around;
+                                                  width: 250px;
+                                                  padding: 28px;
+                                                  border-radius: 10px;
+                                                  border: 1px solid #FA4B37;
+                                                  font-size: 15px;
+                                                  color: #272529;
+                                                  font-family: cursive;
+                                                  text-decoration: none;
+                                                }
+                                                .cbox .det a:hover {
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  color: white;
+                                                }
+                                                .cbox .det a:hover img{
+                                                  filter: brightness(100);
+                                                }
+                                                .cbox img {
+                                                  width: 20px;
+                                                  margin-right: 20px;
+                                                }
+
+                                                /*TEAM SECTION*/
+                                                .totalcard {
+                                                  width: 100%;
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  align-items: center;
+                                                  justify-content: center;
+                                                  margin-bottom: 50px;
+                                                }
+                                                .totalcard .card {
+                                                  margin: 50px;
+                                                  width: 300px;
+                                                  border-radius: 10px;
+                                                  background: #fff;
+                                                }
+                                                .totalcard .card{
+                                                  box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
+                                                          0 0 10px rgba(0,0,0,0.3);
+                                                }
+                                                .card:nth-child(1){
+                                                  border-top: 5px solid green;
+                                                }
+                                                .card:nth-child(2){
+                                                  border-top: 5px solid blue;
+                                                }
+                                                .card:nth-child(1):hover {
+                                                  box-shadow: inset 0px 0px 10px rgba(0,255,0,0.5),
+                                                        1px 1px 30px rgba(0,255,0,0.5);
+                                                }
+                                                .card:nth-child(2):hover {
+                                                  box-shadow: inset 0px 0px 10px rgba(0,0,255,0.5),
+                                                        1px 1px 30px rgba(0,0,255,0.5);
+                                                }
+                                                .totalcard .card img {
+                                                  width: 100px;
+                                                  height: 100px;
+                                                  margin-top: 5px;
+                                                  cursor: pointer;
+                                                  border-radius: 50px;
+                                                  transition-duration: .8s;
+                                                }
+                                                .totalcard .card img:hover {
+                                                  transform: scale(3.5);
+                                                  border-radius: 0;
+                                                  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+                                                }
+                                                #detail p{
+                                                  font-size: 15px;
+                                                  line-height: 25px;
+                                                  font-variant: small-caps;
+                                                  text-align: center;
+                                                  margin: 25px;
+                                                  margin-bottom: 0px;
+                                                  margin-top: 0px;
+                                                }
+                                                #detail button {
+                                                  outline: none;
+                                                  border-radius: 10px;
+                                                  border-style: none;
+                                                  border: 1px solid black;
+                                                  padding: 9px 25px;
+                                                  cursor: pointer;
+                                                  transition-duration: .4s;
+                                                }
+                                                #detail a {
+                                                  bottom: 80px;
+                                                  text-decoration: none;
+                                                  margin-bottom: 30px;
+                                                  margin-top: 20px;
+                                                  margin-left: 90px;
+                                                  align-self: center;
+                                                }
+                                                .btn-roshan:hover {
+                                                  background: rgba(0,255,0,0.7);
+                                                  color: #fff;
+                                                }
+                                                .btn-roshan2:hover {
+                                                  background: rgba(0,0,255,0.5);
+                                                  color: #fff;
+                                                }
+                                                .card-title {
+                                                  font-size: 17px;
+                                                  color: #343A40;
+                                                  padding: 20px;
+                                                  font-weight: 700;
+                                                }
+
+                                                /*Service Section*/
+                                                /*Service Section*/
+                                                .service-swipe {
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("images/extra/b3.jpg");
+                                                  background-size: cover;
+                                                  background-attachment: fixed;
+                                                }
+                                                .service-swipe .s-card img {
+                                                  width: 100px;
+                                                }
+                                                .service-swipe a {
+                                                  padding: 0;
+                                                  margin: 40px 10px;
+                                                }
+                                                .service-swipe .s-card {
+                                                  display: flex;
+                                                  justify-content: space-around;
+                                                  padding: 10px;
+                                                  align-items: center;
+                                                  text-align: center;
+                                                  width: 350px;
+                                                  height: 200px;
+                                                  box-shadow: inset 0 0 20px rgba(255,255,255,0.05),
+                                                          0 0 50px rgba(0,0,0,0.8);
+                                                  border-radius: 5px;
+                                                  cursor: pointer;
+                                                  transition-duration: .5s;
+                                                }
+                                                .service-swipe .s-card p {
+                                                  color: #f2f2f2;
+                                                  font-size: 1.2em;
+                                                  font-family: 'Open Sans',sans-serif;
+                                                }
+                                                .service-swipe .s-card:hover {
+                                                  box-shadow: 0 0 50px rgba(255,255,255,0.8);
+                                                  transform: translateY(-10px);
+                                                }
+
+                                                /*Contact Us Section*/
+                                                .csec {
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  background-attachment: fixed; 
+                                                  position: absolute;
+                                                  width: 100%;
+                                                  height: 250px;
+                                                  top: 200px;
+                                                  content: '';
+                                                  transform-origin: top right;
+                                                  transform: skewY(-10deg);
+                                                  z-index: -1;
+                                                }
+                                                .back-contact {
+                                                  margin-top: 0px;
+                                                  transform: translateY(-50px);
+                                                  display: flex;
+                                                  align-items: center;
+                                                  justify-content: space-around;
+                                                }
+                                                .cc {
+                                                  height: 400px;
+                                                  width: 400px;
+                                                  height: 500px;
+                                                  border-radius: 10px;
+                                                  justify-content: center;
+                                                  box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
+                                                  background: #fff;
+                                                }
+                                                .cc form {
+                                                  margin: 5%;
+                                                  margin-top: 40px;
+                                                  width: 90%;
+                                                  height: 90%;
+                                                }
+                                                .cc form label {
+                                                  position: absolute;
+                                                  color: #2E3D49;
+                                                  font-size: 10px;
+                                                  font-weight: 800;
+                                                }
+                                                .cc form input {
+                                                  padding: 15px;
+                                                  margin-bottom: 10px;
+                                                  border-radius: 5px;
+                                                  box-shadow: inset 0 0 5px lightgray;
+                                                  border: 1px solid rgba(0,0,0,0.2);
+                                                  outline: none;
+                                                  color: #2E3D49;
+                                                  font-weight: 600;
+                                                }
+                                                .imp {
+                                                  color: red;
+                                                }
+                                                form textarea {
+                                                  width: 100%;
+                                                  height: 100px;
+                                                  box-shadow: inset 0 0 5px lightgray;
+                                                  border: 1px solid rgba(0,0,0,0.2);
+                                                  border-radius: 5px;
+                                                  outline: none;
+                                                  color: #2E3D49;
+                                                  font-weight: 600;
+                                                  padding: 15px;
+                                                }
+                                                #csubmit {
+                                                  margin-top: 20px; 
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  border-radius: 5px;
+                                                  border-style: none;
+                                                  outline: none;
+                                                  width: 100%;
+                                                  padding: 15px 25px;
+                                                  color: #fff;
+                                                  font-size: 12px;
+                                                  cursor: pointer;
+                                                }
+
+                                                /*REVIEW SECTION*/
+                                                #makeitfull {
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  transform: translateY(35px);
+                                                }
+                                                #makeitfull img {
+                                                  width: 50px;
+                                                }
+                                                .review {
+                                                  background: #F8F8F8;
+                                                  width: 100%;
+                                                }
+                                                .rev-container {
+                                                  padding: 10px 10%;
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  justify-content: space-around;
+                                                }
+                                                .rev-container .rev-card {
+                                                  /*overflow: hidden;*/
+                                                  width: 550px;
+                                                  height: 240px;
+                                                  margin-bottom: 40px;
+                                                  background: #fff;
+                                                  display: flex;
+                                                  padding: 10px;
+                                                  box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+                                                }
+                                                .rev-card:hover {
+                                                  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+                                                }
+                                                .identity {
+                                                  display: flex;
+                                                  flex-wrap: wrap;
+                                                  justify-content: center;
+                                                  padding: 10px;
+                                                }
+                                                .identity img {
+                                                  width: 120px;
+                                                  height: 120px;
+                                                  transition-duration: .8s;
+                                                  border-radius: 50%;
+                                                }
+                                                .identity img:hover {
+                                                  transform: scale(2.2);
+                                                  border-radius: 0px;
+                                                  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                                                }
+                                                .identity p {
+                                                  width: 150px;
+                                                  font-weight: bold;
+                                                  color: #2E3D49;
+                                                  text-align: center;
+                                                }
+                                                .identity h6 {
+                                                  width: 150px;
+                                                  text-align: center;
+                                                }
+                                                .identity .rating img {
+                                                  width: 12px;
+                                                  height: 12px;
+                                                  margin-right: 5px;
+                                                }
+                                                .rev-cont {
+                                                  overflow: hidden;
+                                                }
+                                                .rev-cont #title {
+                                                  padding: 10px;
+                                                  color: #2E3D49;
+                                                  font-weight: bold;
+                                                }
+                                                .rev-cont #content {
+                                                  padding: 10px;
+                                                  font-size: .9em;
+                                                  color: #2E3D49;
+                                                  line-height: 22px;
+                                                  text-align: justify;
+                                                }
+
+
+                                                /*FEEDBACK*/
+                                                .title2 {
+                                                  position: relative;
+                                                  margin-top: 150px;
+                                                  margin-left: 100px;
+                                                }
+                                                .title2 span{
+                                                  font-weight: 700;
+                                                  font-family: 'Open Sans', sans-serif;
+                                                  font-size: 30px;
+                                                  color: #2E3D49;
+                                                }
+                                                .title2 .shortdesc2 {
+                                                  padding: 10px;
+                                                  font-family: 'Open Sans', sans-serif;
+                                                  font-size: 15px;
+                                                  color: #2E3D49;
+                                                  margin-bottom: 10px;
+                                                }
+                                                .feedbox {
+                                                  margin-top: 50px;
+                                                  width: 100%;
+                                                  display: flex;
+                                                  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("images/extra/b4.jpg");
+                                                  background-size: cover;
+                                                  padding: 50px 80px;
+                                                  background-attachment: fixed;
+                                                }
+                                                .feed {
+                                                  width: 800px;
+                                                  height: 400px;
+                                                  position: relative;
+                                                  border-radius: 10px;
+                                                  justify-content: center;
+                                                  box-shadow: inset 0 0 90px rgba(0,0,0,0.6),
+                                                          0 0 80px rgba(0,0,0,0.2);
+                                                  background: rgba(0,0,0,0.4);
+                                                }
+                                                .feed form {
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  padding: 20px;
+                                                }
+
+                                                .feed form label {
+                                                  position: absolute;
+                                                  color: #f2f2f2;
+                                                  font-size: 10px;
+                                                  font-weight: 800;
+                                                }
+                                                .feed form input, .feed textarea {
+                                                  padding: 15px;
+                                                  border-radius: 5px;
+                                                  box-shadow: inset 0 0 5px lightgray;
+                                                  border: 1px solid rgba(0,0,0,0.2);
+                                                  outline: none;
+                                                  color: #2E3D49;
+                                                  background: #fff9;
+                                                  font-weight: 600;
+                                                }
+                                                .feed form input {
+                                                  margin-bottom: 15px;
+                                                  width: 50%;
+                                                }
+                                                .feed form .fname {
+                                                  width: 25%;
+                                                }
+                                                .feed form textarea {
+                                                  width: 100%;
+                                                  height: 100px;
+                                                }
+                                                .feed #csubmit {
+                                                  margin-top: 25px; 
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  border-radius: 5px;
+                                                  border-style: none;
+                                                  outline: none;
+                                                  width: 100%;
+                                                  padding: 15px 25px;
+                                                  color: #fff;
+                                                  font-size: 12px;
+                                                  cursor: pointer;
+                                                }
+
+                                                /*SCROLLING TEXT*/
+                                                .marqu {
+                                                  text-align: center;
+                                                  justify-content: center;
+                                                  color: #fff;
+                                                  font-size: 20px;
+                                                  padding: 10px;
+                                                }
+
+                                                /*FOOTER*/
+                                                footer {
+                                                  color: #E5E8EF;
+                                                  background: #000D;
+                                                  padding: 50px 0; 
+                                                }
+                                                footer .footer-container {
+                                                  max-width: 1300px;
+                                                  margin: auto;
+                                                  padding: 0 20px;
+                                                  display: flex;
+                                                  justify-content: space-between;
+                                                  align-items: center;
+                                                  flex-wrap: wrap-reverse;
+                                                }
+                                                footer .social-media img{
+                                                  width: 22px;
+                                                }
+                                                footer .logo {
+                                                  width: 180px;
+                                                  color: #fff;
+                                                }
+                                                footer .social-media a{
+                                                  margin-right: 10px;
+                                                  font-size: 22px;
+                                                  text-decoration: none;
+                                                }
+                                                footer .right-col h1{
+                                                  font-size: 26px;
+                                                }
+                                                footer .border{
+                                                  width: 100px;
+                                                  height: 4px;
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  margin: 2px;
+                                                }
+                                                footer .newsletter-form {
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  flex-wrap: wrap;
+                                                }
+                                                footer input::placeholder {
+                                                  color: white !important;
+                                                }
+                                                footer .txtb {
+                                                  flex: 1;
+                                                  padding: 18px 40px;
+                                                  font-size: 16px;
+                                                  background: #343A40;
+                                                  border: none;
+                                                  font-weight: 700;
+                                                  outline: none;
+                                                  border-radius: 5px;
+                                                  min-width: 260px;
+                                                  margin-top: 20px;
+                                                  color: white;
+                                                }
+                                                footer .btn {
+                                                  margin-top: 20px;
+                                                  padding: 18px 40px;
+                                                  font-size: 16px;
+                                                  color: #f1f1f1;
+                                                  background: linear-gradient(to right, #FA4B37, #DF2771);
+                                                  border: none;
+                                                  font-weight: 700;
+                                                  outline: none;
+                                                  border-radius: 5px;
+                                                  margin-left: 20px;
+                                                  cursor: pointer;
+                                                  transition: opacity .3s linear;	
+                                                }
+                                                footer .btn:hover {
+                                                  opacity: .7;
+                                                }
+
+                                                /*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
+                                                @media screen and (max-width: 960px) {
+                                                  .footer-container {
+                                                    max-width: 600px;
+                                                  }
+                                                  .right-col {
+                                                    width: 100%;
+                                                    margin-bottom: 60px;
+                                                  }
+                                                  .left-col {
+                                                    width: 100%;
+                                                    text-align: center;
+                                                  }
+                                                  .social-media {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                  }
+                                                  .logo {
+                                                    transition: 1s;
+                                                    margin-left: 30%;
+                                                  }
+                                                  nav ul, .srch, .get-started{
+                                                    display: none;
+                                                  }
+                                                  .menu {
+                                                    display: block;
+                                                  }
+                                                  nav {
+                                                    padding-bottom: 20px;
+                                                    border-bottom: 1px solid #0005;
+                                                    /* position: fixed; */
+                                                    /* top: 0; */
+                                                  }
+                                                  .quote p, .quote h5, .play {
+                                                    justify-content: center;
+                                                    text-align: center;
+                                                  }
+                                                  .quote p {
+                                                    font-size: 30px;
+                                                  }
+                                                  .service-container .right-side img {
+                                                    width: 90%;
+                                                  }
+                                                  .title {
+                                                    margin-top: 0px;
+                                                  }
+
+                                                }
+                                                @media screen and (max-width: 700px) {
+                                                  footer .btn{
+                                                    margin: 0;
+                                                    width: 100%;
+                                                    margin-top: 20px;
+                                                  }
+                                                  .svg-image img {
+                                                    width: 90%;
+                                                    margin: 20px;
+                                                    /* align-self: center; */
+                                                  }
+                                                }
+
+                                                @media screen and (max-width: 1000px) {	
+                                                  .feedbox form input, .feedbox form .fname{
+                                                    width: 100%;
+                                                  }
+                                                }
+                                              </style>
